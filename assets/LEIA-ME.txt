@@ -1,0 +1,28 @@
+IMAGENS NECESSÁRIAS — coloca os ficheiros nesta pasta (assets/) com estes nomes EXATOS.
+O código (index.html) já aponta para eles; enquanto não estiverem cá, aparece o texto
+alternativo / imagem partida nesses sítios.
+
+LOGÓTIPOS
+  bb-logo.png        -> Logótipo COMPLETO (os dois "B" verdes + "BOXING TEAM").
+                        De preferência PNG com FUNDO TRANSPARENTE e bem recortado.
+                        Usado no hero (ao lado do título BARBOSA BOXING GYM).
+  bb-monogram.png    -> Monograma "BB" (sem texto). Usado no menu (topo) e no rodapé.
+
+FUNDO
+  main_bg_boxe.webp  -> Imagem de fundo do hero e da secção "Projeto Social"
+                        (cena de boxe / atleta). Pode ser .webp ou .jpg.
+
+FOTOS DA EQUIPA (secção "Equipa") — retrato, de preferência vertical
+  pedro_barbosa.png
+  vitor_cabral.png
+  paulo_silva.png    -> (em falta no original; repõe quando tiveres a foto)
+  luis_monteiro.png
+  fabio_jesus.png
+
+OUTRAS
+  equipa_bb.png      -> Foto/cartaz da equipa, usada na secção "Sobre".
+
+Notas:
+- Mantém os nomes em minúsculas e as extensões indicadas.
+- Se quiseres usar outra extensão (ex.: .jpg em vez de .png), avisa para
+  atualizar o caminho no index.html.

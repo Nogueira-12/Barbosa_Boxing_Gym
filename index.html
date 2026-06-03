@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbosa Boxing Gym · International Club · Porto</title>
+  <meta name="description" content="Associação P.N. Barbosa Boxing Team — Barbosa Boxing Gym, o clube internacional de boxe no Porto (Ramalde). Desde 2012. Boxe Olímpico e Profissional, projeto social, treinadores de elite e preços acessíveis.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'bebas': ['"Bebas Neue"', 'cursive'],
+            'inter': ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'boxing-red': '#C41E3A',
+            'boxing-green': '#3E8E2A',
+            'boxing-green-light': '#52A838',
+            'boxing-dark': '#0D0D0D',
+            'boxing-gray': '#1A1A1A',
+            'boxing-gold': '#D4A853',
+            'boxing-light': '#F5F0EB',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-bebas { font-family: 'Bebas Neue', cursive; letter-spacing: 0.03em; }
+    .card-hover { transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -12px rgba(62,142,42,0.30); }
+    /* Fundos de secção variados (mais contraste entre claras e escuras) */
+    .bg-light { background-color: #242424; }
+    .bg-diagonal { background: linear-gradient(135deg, #2E2E2E 0%, #1A1A1A 100%); }
+    .bg-glow-green { background-color: #0D0D0D; background-image: radial-gradient(ellipse at top, rgba(62,142,42,0.32), transparent 62%); }
+    .bg-glow-green-br { background-color: #0D0D0D; background-image: radial-gradient(ellipse at bottom right, rgba(62,142,42,0.30), transparent 58%); }
+    .bg-campaign { background-color: #0D0D0D; background-image: radial-gradient(ellipse at top left, rgba(62,142,42,0.40), transparent 65%); }
+    .bg-grid { background-color: #262626; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 44px 44px; }
+    .bg-contact { background: linear-gradient(180deg, #0D0D0D 0%, #2A2A2A 100%); }
+    .bg-impact { background: linear-gradient(120deg, #0D0D0D 0%, #16321A 50%, #0D0D0D 100%); }
+    .schedule-row:nth-child(even) { background-color: rgba(255,255,255,0.015); }
+    .gold-text { background: linear-gradient(135deg, #D4A853, #F0D78C, #D4A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .green-text { background: linear-gradient(135deg, #4FA235, #7CC659, #4FA235); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .price-card-featured { border: 2px solid #3E8E2A; position: relative; }
+    .price-card-featured::before { content: 'MAIS POPULAR'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #3E8E2A; color: #fff; font-size: 0.7rem; font-weight: 800; padding: 4px 16px; border-radius: 999px; letter-spacing: 0.08em; }
+    @media (max-width: 768px) { .price-card-featured::before { font-size: 0.65rem; padding: 3px 12px; top: -12px; } }
+    /* Schedule grid slot colors */
+    .slot { font-size: 0.68rem; font-weight: 700; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; border-radius: 6px; padding: 8px 4px; text-align: center; }
+    .slot-livre { background: rgba(196,30,58,0.85); color: #fff; }
+    .slot-manut { background: rgba(62,142,42,0.92); color: #fff; }
+    .slot-fisico { background: rgba(56,135,214,0.85); color: #fff; }
+    .slot-sparring { background: rgba(37,60,135,0.95); color: #fff; }
+    .slot-fechado { background: rgba(255,255,255,0.04); color: #6b7280; }
+    .slot-none { background: transparent; color: #4b5563; }
+    .slot-abertura { background: rgba(255,255,255,0.04); color: #fff; }
+    .slot-encerra { background: rgba(255,255,255,0.02); color: #9ca3af; }
+  </style>
+</head>
+<body class="bg-boxing-dark text-white font-inter">
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <div class="w-10 h-10 lg:w-14 lg:h-14 rounded-lg flex items-center justify-center p-1">
+            <img src="assets/bb-monogram.png" alt="Barbosa Boxing Team" class="w-full h-full object-contain">
+          </div>
+          <div class="hidden sm:block">
+            <p class="font-bebas text-xl lg:text-2xl tracking-wider text-white leading-tight">BARBOSA</p>
+            <p class="text-[0.6rem] lg:text-[0.65rem] text-boxing-green tracking-[0.15em] uppercase leading-tight">Boxing Gym · Porto</p>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="#sobre" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Sobre</a>
+          <a href="#projeto" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Projeto</a>
+          <a href="#coaches" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Equipa</a>
+          <a href="#modalidades" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Modalidades</a>
+          <a href="#campanhas" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Campanhas</a>
+          <a href="#precos" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Preçário</a>
+          <a href="#horarios" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Horários</a>
+          <a href="#recrutamento" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Recrutamento</a>
+          <a href="#contactos" class="text-sm text-gray-300 hover:text-boxing-green transition-colors font-medium">Contactos</a>
+        </div>
+
+        <!-- CTA + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#contactos" class="hidden sm:inline-flex items-center gap-2 bg-boxing-green hover:bg-boxing-green-light text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-boxing-green/20">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            Fala Connosco
+          </a>
+          <button id="mobile-toggle" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 transition-colors" aria-label="Menu">
+            <i data-lucide="menu" class="w-5 h-5 text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-boxing-gray border-t border-white/5">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#sobre" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Sobre</a>
+        <a href="#projeto" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Projeto Social</a>
+        <a href="#coaches" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Equipa</a>
+        <a href="#modalidades" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Modalidades</a>
+        <a href="#campanhas" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Campanhas</a>
+        <a href="#precos" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Preçário</a>
+        <a href="#horarios" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Horários</a>
+        <a href="#recrutamento" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Recrutamento</a>
+        <a href="#contactos" class="block px-3 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors text-sm">Contactos</a>
+        <a href="#contactos" class="block w-full text-center bg-boxing-green hover:bg-boxing-green-light text-white text-sm font-bold px-5 py-3 rounded-lg transition-all mt-2">Fala Connosco</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-16 lg:pt-20">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/main_bg_boxe.webp" alt="Barbosa Boxing Gym" class="w-full h-full object-cover object-center opacity-60" loading="eager">
+      <div class="absolute inset-0 bg-gradient-to-r from-boxing-dark via-boxing-dark/90 to-boxing-dark/30 lg:to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-boxing-dark via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-2xl">
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-3 mb-6">
+          <span class="h-px w-10 bg-boxing-green"></span>
+          <span class="text-xs sm:text-sm font-semibold text-boxing-green tracking-[0.22em] uppercase">Associação P.N. · Porto (Ramalde)</span>
+        </div>
+
+        <!-- Logótipo + Wordmark (lockup) -->
+        <div class="flex items-center gap-3 sm:gap-4 mb-6">
+          <img src="assets/bb-logo.png" alt="Barbosa Boxing Team" class="block shrink-0 w-auto h-20 sm:h-32 lg:h-40 -mt-3" loading="eager">
+          <h1 class="font-bebas text-5xl sm:text-7xl lg:text-8xl leading-[0.8] text-white">
+            BARBOSA<br>
+            <span class="green-text">BOXING GYM</span>
+          </h1>
+        </div>
+
+        <!-- Slogan -->
+        <p class="font-bebas text-3xl sm:text-4xl lg:text-5xl text-boxing-gold leading-[0.95] mb-6">
+          É difícil vencer<br class="hidden sm:block"> quem nunca desiste
+        </p>
+
+        <!-- Descrição -->
+        <p class="text-base sm:text-lg text-gray-300 max-w-xl mb-9 leading-relaxed">
+          Formamos <strong class="text-white">campeões dentro e fora do ringue</strong>. Liderança, disciplina e resultados — a tua casa de boxe no coração do Porto.
+        </p>
+
+        <!-- Ações -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+          <a href="#precos" class="inline-flex items-center justify-center gap-2 bg-boxing-green hover:bg-boxing-green-light text-white font-bold px-8 py-4 rounded-lg transition-all text-sm shadow-xl shadow-boxing-green/30">
+            <i data-lucide="dumbbell" class="w-5 h-5"></i>
+            Ver Planos &amp; Preçário
+          </a>
+          <a href="#contactos" class="inline-flex items-center justify-center gap-2 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-white/50 text-white font-bold px-8 py-4 rounded-lg transition-all text-sm">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            Aula Experimental
+          </a>
+        </div>
+
+        <!-- Faixa de valores -->
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm font-bold tracking-[0.15em] uppercase text-gray-400">
+          <span>Foco</span>
+          <span class="text-boxing-green">/</span>
+          <span>Disciplina</span>
+          <span class="text-boxing-green">/</span>
+          <span>Respeito</span>
+          <span class="text-boxing-green">/</span>
+          <span>Superação</span>
+          <span class="text-boxing-green">/</span>
+          <span>Sucesso</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
+      <span class="text-[0.65rem] text-gray-400 tracking-widest uppercase">Scroll</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 text-boxing-green"></i>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section id="sobre" class="py-20 lg:py-28 bg-diagonal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Quem Somos</span>
+          <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-[1.05]">
+            MAIS DO QUE UM GINÁSIO,<br>
+            <span class="green-text">UMA FAMÍLIA</span>
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            A <strong class="text-white">Associação P.N. Barbosa Boxing Team</strong> — Barbosa Boxing Gym é um clube internacional de boxe no Porto (Ramalde). <strong class="text-white">Desde 2012</strong> dedicamo-nos ao <strong class="text-white">Boxe Olímpico e Profissional</strong>, reconhecidos pela excelência técnica e por um ambiente profissional e acolhedor. <span class="text-boxing-gold font-semibold">Liderança. Disciplina. Resultados.</span>
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Dos primeiros passos à competição, formamos campeões dentro e fora do ringue. Mas o nosso propósito vai além do desporto: usamos o boxe como ferramenta de transformação social na comunidade. Temos programas adaptados a todos os níveis e idades, com treinadores experientes e um verdadeiro espírito de equipa.
+          </p>
+          <!-- Values -->
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+            <div class="bg-boxing-dark rounded-xl p-3 text-center">
+              <i data-lucide="target" class="w-5 h-5 text-boxing-green mx-auto mb-1.5"></i>
+              <p class="text-[0.7rem] font-semibold tracking-wide uppercase text-gray-300">Foco</p>
+            </div>
+            <div class="bg-boxing-dark rounded-xl p-3 text-center">
+              <i data-lucide="star" class="w-5 h-5 text-boxing-green mx-auto mb-1.5"></i>
+              <p class="text-[0.7rem] font-semibold tracking-wide uppercase text-gray-300">Disciplina</p>
+            </div>
+            <div class="bg-boxing-dark rounded-xl p-3 text-center">
+              <i data-lucide="handshake" class="w-5 h-5 text-boxing-green mx-auto mb-1.5"></i>
+              <p class="text-[0.7rem] font-semibold tracking-wide uppercase text-gray-300">Respeito</p>
+            </div>
+            <div class="bg-boxing-dark rounded-xl p-3 text-center">
+              <i data-lucide="trending-up" class="w-5 h-5 text-boxing-green mx-auto mb-1.5"></i>
+              <p class="text-[0.7rem] font-semibold tracking-wide uppercase text-gray-300">Superação</p>
+            </div>
+            <div class="bg-boxing-dark rounded-xl p-3 text-center">
+              <i data-lucide="trophy" class="w-5 h-5 text-boxing-green mx-auto mb-1.5"></i>
+              <p class="text-[0.7rem] font-semibold tracking-wide uppercase text-gray-300">Sucesso</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="assets/equipa_bb.png" alt="Barbosa Boxing Team" class="w-full h-auto rounded-2xl shadow-2xl opacity-80" loading="lazy">
+          <div class="absolute -bottom-4 -right-4 bg-boxing-green rounded-xl p-4 shadow-xl hidden sm:block">
+            <p class="font-bebas text-3xl text-white leading-none">#1</p>
+            <p class="text-[0.65rem] text-white/80 mt-1 font-semibold">Clube no Porto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETO SOCIAL SECTION ============ -->
+  <section id="projeto" class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/main_bg_boxe.webp" alt="" class="w-full h-full object-cover opacity-20" loading="lazy">
+      <div class="absolute inset-0 bg-gradient-to-br from-boxing-dark via-boxing-dark/95 to-boxing-green/25"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Projeto Social · Comunidade</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">BOXE QUE <span class="green-text">TRANSFORMA VIDAS</span></h2>
+        <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Mais do que formar atletas, formamos pessoas. Ao longo dos anos usámos o boxe — onde <strong class="text-white">disciplina, respeito e dedicação</strong> são pilares — para apoiar jovens e adultos de todos os estratos sociais a superar desafios reais.
+        </p>
+      </div>
+
+      <!-- Áreas de impacto -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <i data-lucide="users" class="w-7 h-7 text-boxing-green mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Integração Social</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Um espaço de pertença que dá rumo, objetivos e disciplina a quem mais precisa.</p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <i data-lucide="shield" class="w-7 h-7 text-boxing-green mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Combate ao Bullying</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Autoconfiança, autocontrolo e respeito que ajudam a prevenir e a ultrapassar situações de bullying.</p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <i data-lucide="route" class="w-7 h-7 text-boxing-green mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Afastar da Criminalidade</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Uma alternativa às más companhias, com metas e propósito dentro e fora do ringue.</p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <i data-lucide="heart-pulse" class="w-7 h-7 text-boxing-green mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Prevenção de Adições</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Hábitos saudáveis e rotina de treino que afastam de comportamentos de risco.</p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <i data-lucide="hand-heart" class="w-7 h-7 text-boxing-green mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Apoio &amp; Acolhimento</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Acompanhamento próximo a quem enfrenta violência doméstica ou contextos familiares difíceis.</p>
+        </div>
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+          <i data-lucide="brain" class="w-7 h-7 text-boxing-green mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Saúde Mental</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">O treino como aliado contra a ansiedade e a depressão, com foco no bem-estar.</p>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Parceria + acesso -->
+        <div class="bg-boxing-green/10 border border-boxing-green/30 rounded-2xl p-7">
+          <i data-lucide="handshake" class="w-9 h-9 text-boxing-green mb-4"></i>
+          <h3 class="font-bebas text-2xl text-white mb-2">Boxe ao alcance de todos</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            Em parceria com a <strong class="text-white">Junta de Freguesia de Ramalde</strong>, queremos garantir acesso à modalidade a <strong class="text-white">jovens com menos de 18 anos</strong> que, por dificuldades económicas, não poderiam praticar. Menos desigualdade, mais oportunidades.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide">
+            <span class="bg-boxing-green/15 text-boxing-green rounded-full px-3 py-1">Sustentabilidade Social</span>
+            <span class="bg-boxing-green/15 text-boxing-green rounded-full px-3 py-1">Económica</span>
+            <span class="bg-boxing-green/15 text-boxing-green rounded-full px-3 py-1">Ambiental</span>
+          </div>
+        </div>
+
+        <!-- Testemunho -->
+        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-7 border border-white/10 flex flex-col justify-center">
+          <i data-lucide="quote" class="w-8 h-8 text-boxing-gold mb-3"></i>
+          <blockquote class="text-gray-200 leading-relaxed mb-4">
+            “Chegou ao ginásio referenciado pela família, por andar com más companhias. Encontrou no boxe um rumo — <strong class="text-white">sagrou-se Campeão Nacional em 2022</strong>, afastou-se de problemas e melhorou na escola.”
+          </blockquote>
+          <p class="font-bebas text-2xl text-white leading-none">Fabiano</p>
+          <p class="text-sm text-boxing-green font-semibold mt-1">Campeão Nacional 2022 · uma de muitas histórias que queremos multiplicar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COACHES SECTION ============ -->
+  <section id="coaches" class="py-20 lg:py-28 bg-glow-green">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Equipa Técnica</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">A NOSSA <span class="green-text">EQUIPA</span></h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Profissionais com experiência nacional e internacional, dedicados a formar campeões dentro e fora do ringue.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Pedro Barbosa -->
+        <div class="card-hover bg-boxing-gray rounded-2xl overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="assets\pedro_barbosa.png" alt="Pedro Barbosa" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-boxing-gray via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bebas text-2xl text-white">Pedro Barbosa</h3>
+            <p class="text-boxing-green text-sm font-semibold mb-3">Diretor Desportivo · Seleção Nacional de Boxe</p>
+            <ul class="text-gray-400 text-sm space-y-1.5">
+              <li>Ex-Atleta Campeão Nacional (Junior &amp; Senior 1998)</li>
+              <li>Treinador de Boxe e Personal Trainer</li>
+              <li>Treinador de múltiplos Campeões Nacionais (2013–2023)</li>
+              <li>Campeão Nacional Profissional Super Médios 2023 (treinador)</li>
+              <li>Promotor/Organizador do Porto Box Cup</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vitor Cabral -->
+        <div class="card-hover bg-boxing-gray rounded-2xl overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="assets/vitor_cabral.png" alt="Vitor Cabral" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-boxing-gray via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bebas text-2xl text-white">Vitor Cabral</h3>
+            <p class="text-boxing-green text-sm font-semibold mb-3">Treinador de Boxe Nível 1</p>
+            <ul class="text-gray-400 text-sm space-y-1.5">
+              <li>Personal Trainer · Boxe / Funcional Trainer</li>
+              <li>Treinador de Ténis Nível 1</li>
+              <li>Treinador Adjunto — Campeão Nacional Junior 2023</li>
+              <li>Ex-Atleta</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Paulo Silva -->
+        <div class="card-hover bg-boxing-gray rounded-2xl overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="assets/paulo_silva.png" alt="Paulo Silva" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-boxing-gray via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bebas text-2xl text-white">Paulo Silva</h3>
+            <p class="text-boxing-green text-sm font-semibold mb-3">Mestre de Krav Maga · Diretor</p>
+            <ul class="text-gray-400 text-sm space-y-1.5">
+              <li>Diretor da Barbosa Boxing Team</li>
+              <li>Psicologia Desportiva</li>
+              <li>Organizador do Porto Box Cup</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Luis Monteiro -->
+        <div class="card-hover bg-boxing-gray rounded-2xl overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="assets/luis_monteiro.png" alt="Luis Monteiro" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-boxing-gray via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bebas text-2xl text-white">Luis Monteiro</h3>
+            <p class="text-boxing-green text-sm font-semibold mb-3">Treinador de Boxe Nível 2</p>
+            <ul class="text-gray-400 text-sm space-y-1.5">
+              <li>Personal Trainer</li>
+              <li>Licenciado em Desporto</li>
+              <li>Ex-Atleta Olímpico</li>
+              <li>Campeão Nacional</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Fábio Jesus -->
+        <div class="card-hover bg-boxing-gray rounded-2xl overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="assets/fabio_jesus.png" alt="Fábio Jesus" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-boxing-gray via-transparent to-transparent"></div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bebas text-2xl text-white">Fábio Jesus</h3>
+            <p class="text-boxing-green text-sm font-semibold mb-3">Diretor do Clube</p>
+            <ul class="text-gray-400 text-sm space-y-1.5">
+              <li>Seccionista da Equipa de Competição</li>
+              <li>Ex-Atleta</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Highlight card -->
+        <div class="card-hover bg-gradient-to-br from-boxing-green/20 to-boxing-gold/10 border border-boxing-green/30 rounded-2xl p-6 flex flex-col justify-center text-center">
+          <i data-lucide="trophy" class="w-10 h-10 text-boxing-gold mx-auto mb-4"></i>
+          <h3 class="font-bebas text-3xl text-white mb-2 leading-none">PORTO BOX CUP</h3>
+          <p class="text-gray-300 text-sm">Organizamos um dos maiores torneios de boxe, aqui no Porto. Uma equipa que forma e que projeta atletas ao mais alto nível.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODALIDADES SECTION ============ -->
+  <section id="modalidades" class="py-20 lg:py-28 bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">O Que Oferecemos</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">AS NOSSAS <span class="green-text">MODALIDADES</span></h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Programas adaptados a todos os níveis — dos mais novos aos atletas de competição.</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="baby" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Boxe Kids</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="venus" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Boxe Feminino</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="heart-pulse" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Boxe Manutenção</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="sparkles" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Boxe Girls</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="trophy" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Boxe Competição</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="activity" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Treino Funcional</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="flame" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Cardio</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="dumbbell" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Musculação</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="accessibility" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Treinos Adaptados</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="users" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Team Building</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="calendar-check" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Organização de Eventos</span>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-xl p-5 border border-white/5 flex items-center gap-3">
+          <i data-lucide="party-popper" class="w-6 h-6 text-boxing-green shrink-0"></i>
+          <span class="text-sm font-semibold text-white">Festas de Aniversário</span>
+        </div>
+      </div>
+
+      <p class="text-center text-boxing-gold font-semibold mt-8 text-sm tracking-wide uppercase">Programas adaptados a todos os níveis!</p>
+    </div>
+  </section>
+
+  <!-- ============ CAMPANHAS SECTION ============ -->
+  <section id="campanhas" class="py-20 lg:py-28 bg-campaign">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Não Percas</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">CAMPANHAS <span class="green-text">ATUAIS</span></h2>
+        <p class="text-gray-400 max-w-xl mx-auto">As promoções e campanhas a decorrer no Barbosa Boxing Gym. Aproveita enquanto estão disponíveis!</p>
+      </div>
+
+      <!-- =====================================================================
+           CAMPANHAS — campanha ativa. Para adicionar/atualizar campanhas,
+           duplica o bloco <article> abaixo e ajusta título, texto e datas.
+           ===================================================================== -->
+      <div id="campanhas-grid" class="max-w-5xl mx-auto">
+        <article class="relative bg-gradient-to-br from-boxing-gray to-boxing-dark rounded-3xl border border-boxing-green/30 overflow-hidden shadow-2xl">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-boxing-green"></div>
+          <div class="grid lg:grid-cols-5 gap-0">
+            <!-- Left: headline -->
+            <div class="lg:col-span-3 p-7 sm:p-10">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="bg-boxing-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide animate-pulse">Apenas 30 vagas</span>
+                <span class="text-boxing-green text-xs font-semibold uppercase tracking-widest">Campanha Limitada</span>
+              </div>
+              <p class="font-bebas text-lg text-boxing-gold tracking-wide mb-2">Disciplina · Foco · Confiança · Resultados</p>
+              <h3 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.95] mb-4">
+                INSCREVE-TE EM <span class="green-text">JULHO</span>
+              </h3>
+              <p class="text-gray-300 leading-relaxed mb-6 max-w-xl">
+                Paga <strong class="text-white">3 meses</strong> e recebe um <strong class="text-boxing-green">tablet ou telemóvel</strong>! Inclui 3 meses + 3 meses de fidelização — ou seja, treino garantido até <strong class="text-white">31 de dezembro de 2026</strong>.
+              </p>
+              <ul class="grid sm:grid-cols-2 gap-2.5 mb-7">
+                <li class="flex items-center gap-2 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-boxing-green shrink-0"></i>Treinadores experientes</li>
+                <li class="flex items-center gap-2 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-boxing-green shrink-0"></i>Melhora a tua condição física</li>
+                <li class="flex items-center gap-2 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-boxing-green shrink-0"></i>Foco, disciplina e confiança</li>
+                <li class="flex items-center gap-2 text-sm text-gray-300"><i data-lucide="check" class="w-4 h-4 text-boxing-green shrink-0"></i>Faz parte de uma verdadeira equipa</li>
+              </ul>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://wa.me/351913059195" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-boxing-green hover:bg-boxing-green-light text-white font-bold px-6 py-3.5 rounded-lg transition-all text-sm shadow-lg shadow-boxing-green/20">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i>
+                  Garante o teu lugar
+                </a>
+                <a href="tel:+351913059195" class="inline-flex items-center gap-2 bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-bold px-6 py-3.5 rounded-lg transition-all text-sm">
+                  <i data-lucide="phone" class="w-4 h-4"></i>
+                  913 059 195
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: offer highlight -->
+            <div class="lg:col-span-2 bg-boxing-green/10 border-t lg:border-t-0 lg:border-l border-boxing-green/20 p-7 sm:p-10 flex flex-col justify-center text-center">
+              <i data-lucide="gift" class="w-12 h-12 text-boxing-green mx-auto mb-4"></i>
+              <p class="text-gray-400 text-sm uppercase tracking-wider mb-1">Oferta</p>
+              <p class="font-bebas text-3xl sm:text-4xl text-white leading-none mb-3">TABLET OU TELEMÓVEL</p>
+              <p class="text-gray-400 text-sm mb-5">na adesão de 3 meses</p>
+              <div class="bg-boxing-dark/60 rounded-xl p-4 border border-white/5">
+                <p class="text-xs text-gray-400 uppercase tracking-wider">Válido até</p>
+                <p class="font-bebas text-2xl text-boxing-gold">31 Dezembro 2026</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICE LIST SECTION ============ -->
+  <section id="precos" class="py-20 lg:py-28 bg-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Planos de Treino</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4"><span class="green-text">PREÇÁRIO</span></h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Escolhe o plano ideal para ti. Todos incluem acompanhamento da nossa equipa técnica.</p>
+      </div>
+
+      <!-- Top row: Entry costs -->
+      <div class="grid sm:grid-cols-3 gap-6 mb-10">
+        <div class="bg-boxing-dark rounded-2xl p-6 border border-white/5 text-center">
+          <i data-lucide="ticket" class="w-7 h-7 text-boxing-gold mx-auto mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Aula Experimental</h3>
+          <p class="font-bebas text-4xl text-boxing-green mb-1">15<span class="text-lg text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500">Revertida em caso de inscrição no final da aula</p>
+        </div>
+        <div class="bg-boxing-dark rounded-2xl p-6 border border-white/5 text-center">
+          <i data-lucide="user-plus" class="w-7 h-7 text-boxing-gold mx-auto mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Inscrição</h3>
+          <p class="font-bebas text-4xl text-boxing-green mb-1">25<span class="text-lg text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500">Pagamento único de adesão</p>
+        </div>
+        <div class="bg-boxing-dark rounded-2xl p-6 border border-white/5 text-center">
+          <i data-lucide="calendar" class="w-7 h-7 text-boxing-gold mx-auto mb-3"></i>
+          <h3 class="font-bebas text-xl text-white mb-1">Mensalidade Base</h3>
+          <p class="font-bebas text-4xl text-boxing-green mb-1">35<span class="text-lg text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500">por mês</p>
+        </div>
+      </div>
+
+      <!-- Planos Mensais -->
+      <h3 class="font-bebas text-2xl text-white mb-5 text-center">PLANOS MENSAIS <span class="text-boxing-gold text-base font-inter font-normal">(permanência mínima de 3 meses)</span></h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="card-hover bg-boxing-dark rounded-2xl p-6 border border-white/5 flex flex-col text-center">
+          <h4 class="font-bebas text-2xl text-white mb-1">2× / SEMANA</h4>
+          <p class="font-bebas text-5xl text-white mt-3 mb-1">130<span class="text-xl text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500 mb-6">por mês</p>
+          <a href="#contactos" class="mt-auto block w-full text-center bg-white/10 hover:bg-white/15 text-white font-semibold py-3 rounded-lg transition-all text-sm">Inscrever</a>
+        </div>
+        <div class="card-hover price-card-featured bg-boxing-dark rounded-2xl p-6 flex flex-col text-center shadow-xl shadow-boxing-green/10">
+          <h4 class="font-bebas text-2xl text-white mb-1">3× / SEMANA</h4>
+          <p class="font-bebas text-5xl text-white mt-3 mb-1">180<span class="text-xl text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500 mb-6">por mês</p>
+          <a href="#contactos" class="mt-auto block w-full text-center bg-boxing-green hover:bg-boxing-green-light text-white font-bold py-3 rounded-lg transition-all text-sm shadow-lg shadow-boxing-green/20">Inscrever</a>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-2xl p-6 border border-white/5 flex flex-col text-center">
+          <h4 class="font-bebas text-2xl text-white mb-1">4× / SEMANA</h4>
+          <p class="font-bebas text-5xl text-white mt-3 mb-1">210<span class="text-xl text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500 mb-6">por mês</p>
+          <a href="#contactos" class="mt-auto block w-full text-center bg-white/10 hover:bg-white/15 text-white font-semibold py-3 rounded-lg transition-all text-sm">Inscrever</a>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-2xl p-6 border border-white/5 flex flex-col text-center">
+          <h4 class="font-bebas text-2xl text-white mb-1">5× / SEMANA</h4>
+          <p class="font-bebas text-5xl text-white mt-3 mb-1">230<span class="text-xl text-gray-400">€</span></p>
+          <p class="text-xs text-gray-500 mb-6">por mês</p>
+          <a href="#contactos" class="mt-auto block w-full text-center bg-white/10 hover:bg-white/15 text-white font-semibold py-3 rounded-lg transition-all text-sm">Inscrever</a>
+        </div>
+      </div>
+
+      <!-- Packs / Treinos Individuais -->
+      <h3 class="font-bebas text-2xl text-white mb-5 text-center">TREINOS INDIVIDUAIS / PACK'S</h3>
+      <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div class="card-hover bg-boxing-dark rounded-2xl p-6 border border-white/5 flex items-center justify-between">
+          <div>
+            <h4 class="font-bebas text-2xl text-white">8 Aulas</h4>
+            <p class="text-xs text-gray-500">Válido durante 2 meses</p>
+          </div>
+          <p class="font-bebas text-4xl text-boxing-green">150<span class="text-lg text-gray-400">€</span></p>
+        </div>
+        <div class="card-hover bg-boxing-dark rounded-2xl p-6 border border-white/5 flex items-center justify-between">
+          <div>
+            <h4 class="font-bebas text-2xl text-white">10 Aulas</h4>
+            <p class="text-xs text-gray-500">Válido durante 3 meses</p>
+          </div>
+          <p class="font-bebas text-4xl text-boxing-green">180<span class="text-lg text-gray-400">€</span></p>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <p class="text-gray-500 text-sm">💰 Aceitamos dinheiro, MB Way e transferência bancária. A 1ª aula experimental decorre à <span class="text-boxing-gold font-semibold">3ª, 5ª e 6ª-feira</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE SECTION ============ -->
+  <section id="horarios" class="py-20 lg:py-28 bg-glow-green-br">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Quando Treinar</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">MAPA DE <span class="green-text">TREINOS</span></h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Aberto de 2ª a 6ª das 07H00 às 13H00 e das 15H30 às 21H00. Sábado das 08H30 às 13H00. Encerrado aos domingos e feriados.</p>
+      </div>
+
+      <!-- Legend -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8 text-xs font-semibold">
+        <span class="inline-flex items-center gap-2"><span class="w-4 h-4 rounded slot-manut"></span>Treino de Manutenção c/ Monitor</span>
+        <span class="inline-flex items-center gap-2"><span class="w-4 h-4 rounded slot-fisico"></span>Treino Físico Boxe c/ Monitor</span>
+        <span class="inline-flex items-center gap-2"><span class="w-4 h-4 rounded slot-livre"></span>Livre</span>
+        <span class="inline-flex items-center gap-2"><span class="w-4 h-4 rounded slot-sparring"></span>Sparring</span>
+      </div>
+
+      <!-- Weekday grid + separate Saturday panel (scrollable on mobile) -->
+      <div class="overflow-x-auto -mx-4 px-4">
+        <div class="min-w-[820px] flex gap-4 items-start">
+
+          <!-- Weekday grid (2ª–6ª) -->
+          <div class="flex-1 bg-boxing-gray rounded-2xl border border-white/5 shadow-xl overflow-hidden">
+            <div class="grid grid-cols-6 bg-boxing-green/10 border-b border-white/5">
+              <div class="px-3 py-3 text-xs font-bold text-boxing-green tracking-wider uppercase">Horário</div>
+              <div class="px-3 py-3 text-xs font-bold text-boxing-green tracking-wider uppercase text-center">2ª Feira</div>
+              <div class="px-3 py-3 text-xs font-bold text-boxing-green tracking-wider uppercase text-center">3ª Feira</div>
+              <div class="px-3 py-3 text-xs font-bold text-boxing-green tracking-wider uppercase text-center">4ª Feira</div>
+              <div class="px-3 py-3 text-xs font-bold text-boxing-green tracking-wider uppercase text-center">5ª Feira</div>
+              <div class="px-3 py-3 text-xs font-bold text-boxing-green tracking-wider uppercase text-center">6ª Feira</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">07:00</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-manut flex items-center justify-center">Manutenção c/ Monitor</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-manut flex items-center justify-center">Manutenção c/ Monitor</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">08:00</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">09:00</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">11:00</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">13:00</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">13:30</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">15:30</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+              <div class="slot slot-livre flex items-center justify-center">Livre</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">17:00</div>
+              <div class="slot slot-sparring flex items-center justify-center">Sparring</div>
+              <div class="slot slot-fisico flex items-center justify-center">Físico Boxe c/ Monitor</div>
+              <div class="slot slot-sparring flex items-center justify-center">Sparring</div>
+              <div class="slot slot-fisico flex items-center justify-center">Físico Boxe c/ Monitor</div>
+              <div class="slot slot-fisico flex items-center justify-center">Físico Boxe c/ Monitor</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch border-b border-white/5 min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">19:00</div>
+              <div class="slot slot-sparring flex items-center justify-center">Sparring</div>
+              <div class="slot slot-fisico flex items-center justify-center">Físico Boxe c/ Monitor</div>
+              <div class="slot slot-sparring flex items-center justify-center">Sparring</div>
+              <div class="slot slot-fisico flex items-center justify-center">Físico Boxe c/ Monitor</div>
+              <div class="slot slot-fisico flex items-center justify-center">Físico Boxe c/ Monitor</div>
+            </div>
+            <div class="grid grid-cols-6 gap-1.5 p-1.5 items-stretch min-h-[3.5rem]">
+              <div class="flex items-center px-2 text-sm font-semibold text-white">21:00</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+              <div class="slot slot-encerra flex items-center justify-center">Encerramento</div>
+            </div>
+          </div>
+
+          <!-- Sábado — elemento separado, à direita -->
+          <div class="w-48 shrink-0 bg-boxing-gray rounded-2xl border-2 border-boxing-green/40 shadow-xl overflow-hidden">
+            <div class="bg-boxing-green/20 border-b border-white/5 px-3 py-3 text-center">
+              <span class="text-xs font-bold text-boxing-green tracking-wider uppercase">Sábado</span>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-none flex items-center justify-center w-full">—</div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-abertura flex flex-col items-center justify-center w-full"><span>08:30</span><span>Abertura</span></div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-livre flex items-center justify-center w-full">Livre</div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-sparring flex flex-col items-center justify-center w-full"><span>10:00</span><span>Sparring</span></div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-livre flex items-center justify-center w-full">Livre</div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-encerra flex flex-col items-center justify-center w-full"><span>13:00</span><span>Encerramento</span></div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-none flex items-center justify-center w-full">—</div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-none flex items-center justify-center w-full">—</div>
+            </div>
+            <div class="p-1.5 border-b border-white/5 min-h-[3.5rem] flex">
+              <div class="slot slot-none flex items-center justify-center w-full">—</div>
+            </div>
+            <div class="p-1.5 min-h-[3.5rem] flex">
+              <div class="slot slot-none flex items-center justify-center w-full">—</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Opening hours + Sunday note -->
+      <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mt-6">
+        <div class="bg-boxing-gray rounded-2xl border border-white/5 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="clock" class="w-6 h-6 text-boxing-green"></i>
+            <h3 class="font-bebas text-2xl text-white">Horário de Funcionamento</h3>
+          </div>
+          <ul class="space-y-2 text-sm">
+            <li class="flex justify-between"><span class="text-gray-400">2ª a 6ª-feira</span><span class="text-white font-medium">07:00 – 13:00 · 15:30 – 21:00</span></li>
+            <li class="flex justify-between"><span class="text-gray-400">Sábado</span><span class="text-white font-medium">08:30 – 13:00</span></li>
+          </ul>
+        </div>
+        <div class="bg-boxing-gray rounded-2xl border border-white/5 p-6 flex flex-col justify-center text-center">
+          <i data-lucide="moon" class="w-8 h-8 text-gray-500 mx-auto mb-3"></i>
+          <h3 class="font-bebas text-2xl text-white mb-1">Domingos &amp; Feriados</h3>
+          <p class="text-boxing-red font-semibold">Encerrado</p>
+          <p class="text-xs text-gray-500 mt-1">Descanso merecido 💪</p>
+        </div>
+      </div>
+
+      <!-- Status Badge -->
+      <div class="mt-8 flex justify-center">
+        <div id="open-status" class="inline-flex items-center gap-2 bg-boxing-gray border border-white/10 rounded-full px-5 py-2.5">
+          <div id="status-dot" class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+          <span id="status-text" class="text-sm text-gray-300">A verificar...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECRUITMENT SECTION ============ -->
+  <section id="recrutamento" class="py-20 lg:py-28 bg-gradient-to-br from-[#2E2E2E] to-[#141414]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Junta-te à Equipa</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">QUERES SER <span class="green-text">TREINADOR DE BOXE?</span></h2>
+        <p class="text-boxing-gold font-bebas text-2xl tracking-wide">Treina. Inspira. Transforma.</p>
+        <p class="text-gray-400 max-w-xl mx-auto mt-3">Procuramos treinador <strong class="text-white">part-time</strong> · horário pós-laboral (final do dia) · Porto (Ramalde).</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="bg-boxing-dark rounded-2xl p-7 border border-white/5">
+          <h3 class="font-bebas text-2xl text-white mb-5 flex items-center gap-2"><i data-lucide="gift" class="w-5 h-5 text-boxing-green"></i> O Que Oferecemos</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="calendar-clock" class="w-5 h-5 text-boxing-green shrink-0"></i>Horário flexível</li>
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="users" class="w-5 h-5 text-boxing-green shrink-0"></i>Equipa profissional</li>
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="trending-up" class="w-5 h-5 text-boxing-green shrink-0"></i>Ambiente motivador</li>
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="shield-check" class="w-5 h-5 text-boxing-green shrink-0"></i>Faz parte de um projeto sólido e cresce com a nossa marca</li>
+          </ul>
+        </div>
+
+        <div class="bg-boxing-dark rounded-2xl p-7 border border-white/5">
+          <h3 class="font-bebas text-2xl text-white mb-5 flex items-center gap-2"><i data-lucide="clipboard-check" class="w-5 h-5 text-boxing-green"></i> Requisitos</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-boxing-green shrink-0"></i>Experiência em treino de boxe</li>
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-boxing-green shrink-0"></i>Certificação (IPDJ / FPB ou similar)</li>
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-boxing-green shrink-0"></i>Responsabilidade, dinamismo e paixão pelo boxe</li>
+            <li class="flex items-center gap-3 text-sm text-gray-300"><i data-lucide="check" class="w-5 h-5 text-boxing-green shrink-0"></i>Disponibilidade ao final do dia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto mt-6 bg-boxing-green/10 border border-boxing-green/30 rounded-2xl p-7 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+        <div>
+          <p class="font-bebas text-2xl text-white leading-tight">Candidata-te já!</p>
+          <p class="text-gray-400 text-sm">Inspira atletas, transforma vidas. Junta-te à nossa equipa e faz a diferença!</p>
+        </div>
+        <a href="https://wa.me/351913059195" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-boxing-green hover:bg-boxing-green-light text-white font-bold px-6 py-3.5 rounded-lg transition-all text-sm shadow-lg shadow-boxing-green/20 shrink-0">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Envia mensagem no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contactos" class="py-20 lg:py-28 bg-contact">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-boxing-green font-semibold text-sm tracking-widest uppercase mb-3 block">Fala Connosco</span>
+        <h2 class="font-bebas text-4xl sm:text-5xl lg:text-6xl text-white mb-4">CONTACTOS &amp; <span class="green-text">LOCALIZAÇÃO</span></h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Estamos em Ramalde, no Porto. Vem visitar-nos ou entra em contacto — segue-nos e faz parte da equipa!</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Contact Cards -->
+        <div class="lg:col-span-1 space-y-5">
+          <!-- Address -->
+          <a href="https://maps.google.com/?q=R.+Aires+de+Gouveia+Os%C3%B3rio+139,+4100-025+Porto" target="_blank" rel="noopener" class="card-hover flex items-start gap-4 bg-boxing-dark rounded-xl p-5 border border-white/5 block">
+            <div class="w-11 h-11 bg-boxing-green/20 rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5 text-boxing-green"></i>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-sm mb-1">Instalações (Treinos)</p>
+              <p class="text-gray-400 text-sm leading-relaxed">Rua Aires de Gouveia Osório 139<br>4100-025 Porto (Ramalde)</p>
+            </div>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:+351913059195" class="card-hover flex items-start gap-4 bg-boxing-dark rounded-xl p-5 border border-white/5 block">
+            <div class="w-11 h-11 bg-boxing-green/20 rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="phone" class="w-5 h-5 text-boxing-green"></i>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-sm mb-1">Telefone</p>
+              <p class="text-gray-400 text-sm">+351 913 059 195</p>
+              <p class="text-xs text-gray-500 mt-1">Chamada para rede móvel nacional</p>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:promotionsbbteam@gmail.com" class="card-hover flex items-start gap-4 bg-boxing-dark rounded-xl p-5 border border-white/5 block">
+            <div class="w-11 h-11 bg-boxing-green/20 rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5 text-boxing-green"></i>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-sm mb-1">Email</p>
+              <p class="text-gray-400 text-sm break-all">promotionsbbteam@gmail.com</p>
+              <p class="text-xs text-gray-500 mt-1">Respondemos em até 24h</p>
+            </div>
+          </a>
+
+          <!-- Social -->
+          <div class="flex gap-3 justify-center">
+            <a href="https://www.instagram.com/barbosaboxinggym/" target="_blank" rel="noopener" class="group w-11 h-11 rounded-lg flex items-center justify-center bg-[#2A2A2A] border border-white/10 hover:bg-boxing-green hover:border-boxing-green transition-colors" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[oklch(72.3%_0.219_149.579)] group-hover:text-white"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.5.01-4.74.07-.97.04-1.5.21-1.85.34-.46.18-.8.4-1.15.74-.34.35-.56.69-.74 1.15-.13.35-.3.88-.34 1.85-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.97.21 1.5.34 1.85.18.46.4.8.74 1.15.35.34.69.56 1.15.74.35.13.88.3 1.85.34 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.97-.04 1.5-.21 1.85-.34.46-.18.8-.4 1.15-.74.34-.35.56-.69.74-1.15.13-.35.3-.88.34-1.85.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.97-.21-1.5-.34-1.85a3.1 3.1 0 0 0-.74-1.15 3.1 3.1 0 0 0-1.15-.74c-.35-.13-.88-.3-1.85-.34-1.24-.06-1.59-.07-4.74-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/barbosaboxebbteam/?locale=pt_PT" target="_blank" rel="noopener" class="group w-11 h-11 rounded-lg flex items-center justify-center bg-[#2A2A2A] border border-white/10 hover:bg-boxing-green hover:border-boxing-green transition-colors" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[oklch(72.3%_0.219_149.579)] group-hover:text-white"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@barbosa_boxing_gym" target="_blank" rel="noopener" class="group w-11 h-11 rounded-lg flex items-center justify-center bg-[#2A2A2A] border border-white/10 hover:bg-boxing-green hover:border-boxing-green transition-colors" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[oklch(72.3%_0.219_149.579)] group-hover:text-white"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.84a2.34 2.34 0 0 1-2.34 2.34 2.34 2.34 0 1 1 .64-4.59v-3.26a5.6 5.6 0 0 0-.64-.04 5.6 5.6 0 1 0 5.6 5.6V8.9a7.46 7.46 0 0 0 4.37 1.4V7.1a4.28 4.28 0 0 1-3.37-1.28z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map + Form -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Map -->
+          <div class="bg-boxing-dark rounded-xl overflow-hidden border border-white/5 h-64 sm:h-72">
+            <iframe
+              src="https://www.google.com/maps?q=R.%20Aires%20de%20Gouveia%20Os%C3%B3rio%20139%2C%204100-025%20Porto&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Localização do Barbosa Boxing Gym no mapa">
+            </iframe>
+          </div>
+
+          <!-- Quick Contact Form -->
+          <form class="bg-boxing-dark rounded-xl p-6 border border-white/5 space-y-4">
+            <h3 class="font-bebas text-xl text-white mb-2">Envia-nos uma mensagem</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input type="text" placeholder="O teu nome" class="w-full bg-boxing-gray border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-boxing-green transition-colors">
+              <input type="email" placeholder="O teu email" class="w-full bg-boxing-gray border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-boxing-green transition-colors">
+            </div>
+            <textarea rows="4" placeholder="A tua mensagem..." class="w-full bg-boxing-gray border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-boxing-green transition-colors resize-none"></textarea>
+            <button type="submit" class="inline-flex items-center gap-2 bg-boxing-green hover:bg-boxing-green-light text-white font-bold px-6 py-3 rounded-lg transition-all text-sm shadow-lg shadow-boxing-green/20">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-boxing-dark border-t border-white/5 pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Marca + redes -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center p-1">
+              <img src="assets/bb-monogram.png" alt="Barbosa Boxing Team" class="w-full h-full object-contain">
+            </div>
+            <div>
+              <p class="font-bebas text-lg text-white leading-tight">BARBOSA BOXING GYM</p>
+              <p class="text-[0.6rem] text-gray-500 tracking-wider uppercase">International Club · Porto</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed mb-5">Formamos campeões dentro e fora do ringue. <span class="text-boxing-green">É difícil vencer quem nunca desiste.</span></p>
+          <div class="flex gap-2">
+            <a href="https://www.instagram.com/barbosaboxinggym/" target="_blank" rel="noopener" class="group w-10 h-10 rounded-lg flex items-center justify-center bg-[#2A2A2A] border border-white/10 hover:bg-boxing-green hover:border-boxing-green transition-colors" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-[oklch(72.3%_0.219_149.579)] group-hover:text-white"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.5.01-4.74.07-.97.04-1.5.21-1.85.34-.46.18-.8.4-1.15.74-.34.35-.56.69-.74 1.15-.13.35-.3.88-.34 1.85-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.97.21 1.5.34 1.85.18.46.4.8.74 1.15.35.34.69.56 1.15.74.35.13.88.3 1.85.34 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.97-.04 1.5-.21 1.85-.34.46-.18.8-.4 1.15-.74.34-.35.56-.69.74-1.15.13-.35.3-.88.34-1.85.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.97-.21-1.5-.34-1.85a3.1 3.1 0 0 0-.74-1.15 3.1 3.1 0 0 0-1.15-.74c-.35-.13-.88-.3-1.85-.34-1.24-.06-1.59-.07-4.74-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 9a3.54 3.54 0 1 0 0-7.08 3.54 3.54 0 0 0 0 7.08zm6.95-9.22a1.28 1.28 0 1 1-2.55 0 1.28 1.28 0 0 1 2.55 0z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/barbosaboxebbteam/?locale=pt_PT" target="_blank" rel="noopener" class="group w-10 h-10 rounded-lg flex items-center justify-center bg-[#2A2A2A] border border-white/10 hover:bg-boxing-green hover:border-boxing-green transition-colors" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-[oklch(72.3%_0.219_149.579)] group-hover:text-white"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@barbosa_boxing_gym" target="_blank" rel="noopener" class="group w-10 h-10 rounded-lg flex items-center justify-center bg-[#2A2A2A] border border-white/10 hover:bg-boxing-green hover:border-boxing-green transition-colors" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-[oklch(72.3%_0.219_149.579)] group-hover:text-white"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.84a2.34 2.34 0 0 1-2.34 2.34 2.34 2.34 0 1 1 .64-4.59v-3.26a5.6 5.6 0 0 0-.64-.04 5.6 5.6 0 1 0 5.6 5.6V8.9a7.46 7.46 0 0 0 4.37 1.4V7.1a4.28 4.28 0 0 1-3.37-1.28z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegação -->
+        <div>
+          <h4 class="font-bebas text-lg text-white mb-4 tracking-wide">Navegação</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#sobre" class="text-gray-400 hover:text-boxing-green transition-colors">Sobre</a></li>
+            <li><a href="#projeto" class="text-gray-400 hover:text-boxing-green transition-colors">Projeto Social</a></li>
+            <li><a href="#coaches" class="text-gray-400 hover:text-boxing-green transition-colors">Equipa</a></li>
+            <li><a href="#modalidades" class="text-gray-400 hover:text-boxing-green transition-colors">Modalidades</a></li>
+            <li><a href="#precos" class="text-gray-400 hover:text-boxing-green transition-colors">Preçário</a></li>
+            <li><a href="#horarios" class="text-gray-400 hover:text-boxing-green transition-colors">Horários</a></li>
+            <li><a href="#recrutamento" class="text-gray-400 hover:text-boxing-green transition-colors">Recrutamento</a></li>
+          </ul>
+        </div>
+
+        <!-- Contactos -->
+        <div>
+          <h4 class="font-bebas text-lg text-white mb-4 tracking-wide">Contactos</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="tel:+351913059195" class="text-gray-400 hover:text-boxing-green transition-colors">+351 913 059 195</a></li>
+            <li><a href="mailto:promotionsbbteam@gmail.com" class="text-gray-400 hover:text-boxing-green transition-colors break-all">promotionsbbteam@gmail.com</a></li>
+            <li class="text-gray-500 text-xs pt-1">2ª a 6ª: 07h–13h · 15h30–21h<br>Sábado: 08h30–13h</li>
+          </ul>
+        </div>
+
+        <!-- Moradas -->
+        <div>
+          <h4 class="font-bebas text-lg text-white mb-4 tracking-wide">Onde Estamos</h4>
+          <div class="space-y-4 text-sm">
+            <div>
+              <p class="text-white font-semibold text-xs uppercase tracking-wider mb-1">Instalações (Treinos)</p>
+              <p class="text-gray-400 leading-relaxed">Rua Aires de Gouveia Osório 139<br>4100-025 Porto (Ramalde)</p>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-xs uppercase tracking-wider mb-1">Sede</p>
+              <p class="text-gray-400 leading-relaxed">Rua da Arrábida n.º 2<br>4150-110 Porto</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
+        <p class="text-xs text-gray-500">&copy; <span id="current-year"></span> Associação P.N. Barbosa Boxing Team · NIF 516 928 015</p>
+        <p class="text-xs text-gray-600">Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
